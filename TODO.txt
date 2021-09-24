@@ -1,0 +1,4 @@
+Storybook shared-ui
+https://storybook.js.org/docs/react/workflows/publish-storybook
+1. Build storybook web app --> https://nx.dev/l/a/storybook/build
+2. Solve how to host it 

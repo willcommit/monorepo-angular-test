@@ -1,13 +1,12 @@
-import { getGreeting } from '../support/app.po';
+import { getDatatable, getAddDataButton } from '../support/app.po';
 
-describe('invoice-app', () => {
+describe('dataTable', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to invoice-app!');
+  it('should display data rows', () => {
+    getDatatable().should((t) => expect(t.length).equal(2));
+    getAddDataButton().click();
+    getDatatable().should((t) => expect(t.length).equal(3));
   });
+
 });
