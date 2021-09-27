@@ -1,1 +1,35 @@
-<p>navbar works!</p>
+<nav class="login-navbar navbar-default">
+    <div class="login-navbar-brand ">
+        <a href="">
+            <img src="https://finance.arvato.com/static/img/arvato-positiv.svg" alt="Home">
+        </a>
+    </div>
+
+    <div *ngIf="authenticated" class="dropdown">
+        <button id="dropdown-button" class="dropdown-button">MENU</button>
+
+        <ul id="dropdown-menu" class="dropdown-content">
+            <!-- @if (LayoutHelper.ShowNavigationSidebar)
+            {
+                @Html.RenderNavigationMenuItems()
+            }
+
+            @if (LayoutHelper.ShowLogOffButton)
+            {
+                using (Html.BeginForm("LogOff", "Authentication", FormMethod.Post, new { id = "logoutform" }))
+                {
+                    @Html.Partial("~/Views/Authentication/_LogoutLink.cshtml")
+                }
+            }
+
+            @if (LayoutHelper.ShowLanguageMenu)
+            {
+                @Html.Partial("~/Views/Shared/Components/Navbar/language-menu/language-menu.cshtml")
+            } -->
+        </ul>
+    </div>
+   
+
+    <!-- Else show language menu componet -->
+
+</nav>
