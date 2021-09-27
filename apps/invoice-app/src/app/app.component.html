@@ -1,1 +1,4 @@
-<customer-portal-navbar></customer-portal-navbar>
+<customer-portal-navbar [authenticated]="authenticated"></customer-portal-navbar>
+<div class="page">
+    <customer-portal-test-login *ngIf="!authenticated" (login)="onLogin()"></customer-portal-test-login>
+</div>
